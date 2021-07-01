@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: rgb(6, 6, 37);
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  z-index: 3;
+}
+
+.right,
+.left {
+  background-color: rgba(36, 57, 99, 0.801);
+  padding: 30px;
+  color: #ccc;
+}
+
+.left {
+  flex-basis: 40%;
+  border-top-right-radius: 80px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.right {
+  border-radius: 10px;
+  flex-basis: 53%;
+  align-self: flex-end;
+  font-size: 0.875rem;
+  position: relative;
+}
+
+#talk {
+  position: absolute;
+  top: -20%;
+  left: 60%;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #fcfcfc;
+  color: #333;
+  border-radius: 10px;
+  width: 35%;
+  text-align: center;
+}
+
+b {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: #000;
+}
+
+#talk span {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+#icons {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+  align-items: flex-end;
+}
+
+#icons p img {
+  padding: 8px;
+  background-color: rgb(6, 6, 37);
+  border-radius: 5px;
+}
+
+#measures {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+#measures p {
+  font-size: 0.775rem;
+}
+
+#used {
+  font-weight: 900;
+}
+
+.right > p {
+  margin-bottom: 0.75rem;
+  font-size: 0.775rem;
+}
+
+.progress-bar {
+  background-color: rgb(6, 6, 37);
+  width: 100%;
+  border-radius: 15px;
+}
+
+.progress-stats {
+  padding: 2%;
+  background-color: rgb(221, 94, 173);
+  border-radius: 15px;
+  width: 70%;
+  position: relative;
+}
+
+.progress-stats-inner {
+  position: absolute;
+  border-radius: 15px;
+  background-color: #fff;
+  right: 0;
+  top: 0;
+  padding: 2.8%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-image: url("./img/bg-desktop.png");
+  border: 0;
+  z-index: 2;
+  width: 100%;
+  height: 50vh;
+}
+
+@media (max-width: 960px) {
+  body {
+    background-image: url("./img/bg-mobile.png");
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  .container {
+    flex-direction: column;
+    width: 60%;
+  }
+  .left {
+    margin-bottom: 1rem;
+  }
+  .left,
+  .right {
+    width: 100%;
+    position: relative;
+  }
+  #icons {
+    width: 65%;
+  }
+  #talk {
+    left: 35%;
+    top: 75%;
+  }
+
+  @media (max-width: 640px) {
+    .container {
+      width: 85%;
+    }
+
+    #icons {
+      width: 80%;
+    }
+
+    #talk {
+      padding: 5px 10px;
+      width: 55%;
+      left: 20%;
+      top: 80%;
+    }
+  }
+}
